@@ -1,0 +1,3273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>dominioncity — Modern Exam Papers</title>
+
+  <meta
+    name="description"
+    content="Get modern exam papers fast and easily from Pre-Nursery to Senior Secondary School."
+  />
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --green: #25d366;
+      --dark-green: #075e54;
+
+      --text: #111b21;
+      --muted: #667781;
+
+      --cream: #fcf7ef;
+      --light: #f7f9fa;
+
+      --border: #e9edef;
+
+      --white: #ffffff;
+    }
+
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+
+      background: var(--cream);
+
+      line-height: 1.5;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .nav {
+      height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 6%;
+
+      background: var(--cream);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+    }
+
+
+    .brand {
+      font-size: 23px;
+
+      font-weight: 700;
+
+      letter-spacing: -0.8px;
+
+      color: var(--dark-green);
+    }
+
+
+    .nav-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      background: var(--green);
+
+      color: #071d14;
+
+      padding: 11px 19px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: 0.2s ease;
+    }
+
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       HERO AREA
+    ========================================================= */
+
+    .hero-wrapper {
+      width: 100%;
+
+      padding:
+        32px 24px
+        55px;
+    }
+
+
+    .hero-card {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 1280px;
+
+      height: 500px;
+
+      margin: 0 auto;
+
+      overflow: hidden;
+
+      border-radius: 32px;
+
+      background: #222;
+    }
+
+
+    /* =========================================================
+       HERO IMAGE
+    ========================================================= */
+
+    .hero-image {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      display: block;
+    }
+
+
+    /* =========================================================
+       HERO DARK OVERLAY
+    ========================================================= */
+
+    .hero-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.68) 0%,
+          rgba(0, 0, 0, 0.45) 38%,
+          rgba(0, 0, 0, 0.12) 75%,
+          rgba(0, 0, 0, 0.03) 100%
+        );
+    }
+
+
+    /* =========================================================
+       HERO CONTENT
+    ========================================================= */
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      padding: 60px 7%;
+    }
+
+
+    .hero-content-inner {
+      width: 100%;
+
+      max-width: 590px;
+
+      color: white;
+    }
+
+
+    .hero-title {
+      font-size:
+        clamp(48px, 6vw, 76px);
+
+      line-height: 0.98;
+
+      letter-spacing: -2.5px;
+
+      font-weight: 500;
+
+      margin-bottom: 25px;
+    }
+
+
+    .hero-description {
+      max-width: 540px;
+
+      font-size:
+        clamp(17px, 2vw, 21px);
+
+      line-height: 1.5;
+
+      color:
+        rgba(255, 255, 255, 0.96);
+
+      margin-bottom: 12px;
+    }
+
+
+    /* =========================================================
+       PRICE
+    ========================================================= */
+
+    .hero-price {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin:
+        7px 0
+        2px;
+    }
+
+
+    .hero-old-price {
+      font-size: 21px;
+
+      color:
+        rgba(255, 255, 255, 0.68);
+
+      text-decoration: line-through;
+    }
+
+
+    .hero-new-price {
+      font-size: 35px;
+
+      font-weight: 800;
+
+      color: white;
+
+      letter-spacing: -1px;
+    }
+
+
+    .hero-coverage {
+      font-size: 16px;
+
+      color:
+        rgba(255, 255, 255, 0.92);
+
+      margin-bottom: 27px;
+    }
+
+
+    /* =========================================================
+       HERO BUTTON
+    ========================================================= */
+
+    .hero-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      min-width: 205px;
+
+      background: var(--green);
+
+      color: #071d14;
+
+      padding: 16px 25px;
+
+      border-radius: 999px;
+
+      font-size: 16px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 8px 28px
+        rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 13px 35px
+        rgba(0, 0, 0, 0.25);
+    }
+
+
+    .hero-button-arrow {
+      font-size: 20px;
+
+      line-height: 1;
+    }
+
+
+    /* =========================================================
+       MAIN SECTIONS
+    ========================================================= */
+
+    .section {
+      padding: 90px 24px;
+    }
+
+
+    .section-inner {
+      max-width: 1050px;
+
+      margin: 0 auto;
+    }
+
+
+    .section-heading {
+      max-width: 650px;
+
+      margin-bottom: 45px;
+    }
+
+
+    .section-heading h2 {
+      font-size:
+        clamp(34px, 5vw, 50px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+    }
+
+
+    .section-heading p {
+      color: var(--muted);
+
+      margin-top: 14px;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================================================
+       MODERN INPUT → OUTPUT PROCESS
+    ========================================================= */
+
+    .process {
+      position: relative;
+
+      padding: 0;
+
+      background: transparent;
+
+      border: none;
+
+      border-radius: 0;
+    }
+
+
+    /* =========================================================
+       PROCESS TITLE
+    ========================================================= */
+
+    .process-title {
+      font-size:
+        clamp(25px, 3vw, 32px);
+
+      line-height: 1.1;
+
+      font-weight: 700;
+
+      letter-spacing: -1.2px;
+
+      color: var(--text);
+    }
+
+
+    .process-subtitle {
+      color: var(--muted);
+
+      font-size: 16px;
+
+      margin-top: 8px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       INPUT LIST
+    ========================================================= */
+
+    .input-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 14px;
+
+      margin-top: 32px;
+    }
+
+
+    /* =========================================================
+       INPUT CARD
+    ========================================================= */
+
+    .input-pill {
+      position: relative;
+
+      min-height: 150px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      padding: 20px;
+
+      background:
+        rgba(255, 255, 255, 0.52);
+
+      border:
+        1px solid rgba(17, 27, 33, 0.08);
+
+      border-radius: 20px;
+
+      color: var(--text);
+
+      overflow: hidden;
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .input-pill:hover {
+      transform: translateY(-4px);
+
+      background:
+        rgba(255, 255, 255, 0.95);
+
+      border-color:
+        rgba(37, 211, 102, 0.35);
+
+      box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.07);
+    }
+
+
+    /* =========================================================
+       INPUT CARD TOP LINE
+    ========================================================= */
+
+    .input-pill::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      right: 0;
+
+      top: 0;
+
+      height: 3px;
+
+      background: var(--green);
+
+      opacity: 0;
+
+      transition: opacity 0.25s ease;
+    }
+
+
+    .input-pill:hover::before {
+      opacity: 1;
+    }
+
+
+    /* =========================================================
+       INPUT ICON
+    ========================================================= */
+
+    .input-icon {
+      position: absolute;
+
+      top: 18px;
+
+      left: 18px;
+
+      width: 42px;
+
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background: #eefaf2;
+
+      color: var(--dark-green);
+
+      font-size: 18px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       INPUT CARD TITLE
+    ========================================================= */
+
+    .input-name {
+      font-size: 16px;
+
+      font-weight: 700;
+
+      letter-spacing: -0.2px;
+
+      line-height: 1.2;
+    }
+
+
+    .input-description {
+      margin-top: 6px;
+
+      color: var(--muted);
+
+      font-size: 12.5px;
+
+      line-height: 1.4;
+    }
+
+
+    /* =========================================================
+       TRANSFORMATION CONNECTOR
+    ========================================================= */
+
+    .arrow-divider {
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      height: 82px;
+
+      margin: 8px 0;
+    }
+
+
+    .arrow-divider::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      right: 0;
+
+      top: 50%;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(7, 94, 84, 0.18),
+          transparent
+        );
+    }
+
+
+    .arrow-circle {
+      position: relative;
+
+      z-index: 2;
+
+      width: 48px;
+
+      height: 48px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--cream);
+
+      border:
+        1px solid rgba(7, 94, 84, 0.12);
+
+      color: var(--dark-green);
+
+      font-size: 21px;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       OUTPUT BOX
+    ========================================================= */
+
+    .output-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 32px;
+
+      border-radius: 26px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(37, 211, 102, 0.11),
+          rgba(255, 255, 255, 0.58)
+        );
+
+      border:
+        1px solid rgba(37, 211, 102, 0.18);
+    }
+
+
+    /* Decorative glow */
+
+    .output-box::before {
+      content: "";
+
+      position: absolute;
+
+      width: 230px;
+
+      height: 230px;
+
+      right: -100px;
+
+      top: -130px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(37, 211, 102, 0.10);
+
+      pointer-events: none;
+    }
+
+
+    .output-content {
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    /* =========================================================
+       OUTPUT HEADER
+    ========================================================= */
+
+    .output-label {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-bottom: 10px;
+
+      color: var(--dark-green);
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
+    }
+
+
+    .output-label::before {
+      content: "";
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+    }
+
+
+    .output-title {
+      font-size:
+        clamp(23px, 3vw, 30px);
+
+      line-height: 1.1;
+
+      font-weight: 700;
+
+      letter-spacing: -1px;
+
+      color: var(--text);
+    }
+
+
+    .output-description {
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.55;
+
+      margin-top: 9px;
+    }
+
+
+    /* =========================================================
+       OUTPUT FORMAT CARDS
+    ========================================================= */
+
+    .output-tags {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 10px;
+
+      margin-top: 25px;
+    }
+
+
+    .output-tag {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      padding: 13px 14px;
+
+      background:
+        rgba(255, 255, 255, 0.82);
+
+      border:
+        1px solid rgba(17, 27, 33, 0.07);
+
+      border-radius: 13px;
+
+      color: var(--text);
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 4px 14px
+        rgba(0, 0, 0, 0.025);
+    }
+
+
+    .output-icon {
+      width: 30px;
+
+      height: 30px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 8px;
+
+      background: #eefaf2;
+
+      color: var(--dark-green);
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.gallery-category {
+  width: 100%;
+  min-width: 0;
+}
+
+
+.category-name {
+  margin-bottom: 22px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: var(--dark-green);
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.gallery-slider {
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARD VIEWPORT
+========================================================= */
+
+.gallery-viewport {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD ROW
+========================================================= */
+
+..gallery-items {
+  display: flex;
+
+  gap: 18px;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  padding: 4px 4px 10px 0;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-items::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* =========================================================
+   EXAM CARD
+========================================================= */
+
+.exam-card {
+  flex: 0 0 310px;
+
+  width: 310px;
+
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(17, 27, 33, 0.07);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.045);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.exam-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.075);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.exam-image {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 0.76;
+
+  object-fit: cover;
+
+  background: #f3f5f5;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.exam-info {
+  padding: 18px 18px 21px;
+}
+
+
+.exam-title {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: var(--text);
+}
+
+
+.exam-description {
+  margin-top: 7px;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   BUTTON AREA
+
+   Buttons sit together underneath the cards,
+   aligned to the LEFT.
+========================================================= */
+
+.gallery-controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  margin-top: 25px;
+
+  padding-left: 2px;
+}
+
+
+/* =========================================================
+   WHATSAPP-INSPIRED CIRCULAR BUTTON
+========================================================= */
+
+.gallery-nav {
+  width: 56px;
+
+  height: 56px;
+
+  flex: 0 0 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  border: 2px solid #172126;
+
+  background: transparent;
+
+  color: #172126;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* Arrow */
+
+.gallery-nav::before {
+  content: "";
+
+  width: 11px;
+
+  height: 11px;
+
+  border-top: 2.5px solid currentColor;
+
+  border-right: 2.5px solid currentColor;
+}
+
+
+.gallery-prev::before {
+  transform: rotate(-135deg);
+
+  margin-left: 5px;
+}
+
+
+.gallery-next::before {
+  transform: rotate(45deg);
+
+  margin-right: 5px;
+}
+
+
+/* Hover */
+
+.gallery-nav:hover {
+  background: #25d366;
+
+  border-color: #25d366;
+
+  color: #ffffff;
+
+  transform: scale(1.04);
+}
+
+
+/* Active */
+
+.gallery-nav:active {
+  transform: scale(0.94);
+}
+
+
+/* Disabled */
+
+.gallery-nav:disabled {
+  opacity: 0.30;
+
+  cursor: default;
+
+  background: transparent;
+
+  border-color: #172126;
+
+  color: #172126;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+.gallery-loading {
+  padding: 40px 0;
+
+  font-size: 15px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .gallery {
+    gap: 48px;
+  }
+
+
+  .category-name {
+    margin-bottom: 18px;
+  }
+
+
+  .gallery-items {
+    gap: 14px;
+
+    padding-left: 0;
+
+    padding-right: 0;
+  }
+
+
+  /*
+    One large card + part of the next card.
+    This gives the WhatsApp-style carousel feeling.
+  */
+
+  .exam-card {
+    flex: 0 0 calc(100vw - 105px);
+
+    width: calc(100vw - 105px);
+
+    border-radius: 24px;
+  }
+
+
+  .exam-info {
+    padding: 16px 16px 19px;
+  }
+
+
+  .exam-title {
+    font-size: 15px;
+  }
+
+
+  .exam-description {
+    font-size: 12px;
+  }
+
+
+  .gallery-controls {
+    gap: 14px;
+
+    margin-top: 23px;
+
+    padding-left: 0;
+  }
+
+
+  .gallery-nav {
+    width: 52px;
+
+    height: 52px;
+
+    flex-basis: 52px;
+  }
+
+}
+
+/* =========================================================
+   DYNAMIC EXAM GALLERY
+========================================================= */
+
+#examGallery {
+  width: 100%;
+}
+
+
+.dynamic-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+.dynamic-gallery-category {
+  width: 100%;
+}
+
+
+.dynamic-gallery-category-name {
+  margin-bottom: 18px;
+
+  color: var(--dark-green);
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.dynamic-gallery-slider {
+  width: 100%;
+}
+
+
+/* =========================================================
+   VIEWPORT
+========================================================= */
+
+.dynamic-gallery-viewport {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TRACK
+
+   This is intentionally NOT called .gallery-items
+   so old gallery CSS cannot interfere with it.
+========================================================= */
+
+.dynamic-gallery-track {
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+
+  gap: 18px;
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  padding: 4px 4px 12px 0;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.dynamic-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.dynamic-exam-card {
+
+  flex: 0 0 310px;
+
+  width: 310px;
+
+  min-width: 310px;
+
+  overflow: hidden;
+
+  scroll-snap-align: start;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(17, 27, 33, 0.07);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.045);
+
+  box-sizing: border-box;
+}
+
+
+.dynamic-exam-card img {
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 0.707;
+
+  object-fit: cover;
+
+  background: #edf0f2;
+}
+
+
+.dynamic-exam-info {
+
+  padding: 18px 18px 21px;
+}
+
+
+.dynamic-exam-title {
+
+  font-size: 17px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+
+.dynamic-exam-description {
+
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.dynamic-gallery-controls {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  margin-top: 24px;
+}
+
+
+.dynamic-gallery-button {
+
+  width: 56px;
+
+  height: 56px;
+
+  flex: 0 0 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: 2px solid #172126;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #172126;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+
+/* Arrow */
+
+.dynamic-gallery-button::before {
+
+  content: "";
+
+  width: 10px;
+
+  height: 10px;
+
+  border-top: 2.5px solid currentColor;
+
+  border-right: 2.5px solid currentColor;
+}
+
+
+.dynamic-gallery-button.prev::before {
+
+  transform: rotate(-135deg);
+
+  margin-left: 4px;
+}
+
+
+.dynamic-gallery-button.next::before {
+
+  transform: rotate(45deg);
+
+  margin-right: 4px;
+}
+
+
+/* Hover */
+
+.dynamic-gallery-button:hover:not(:disabled) {
+
+  background: #25d366;
+
+  border-color: #25d366;
+
+  color: #ffffff;
+
+  transform: scale(1.04);
+}
+
+
+/* Press */
+
+.dynamic-gallery-button:active:not(:disabled) {
+
+  transform: scale(.94);
+}
+
+
+/* Disabled */
+
+.dynamic-gallery-button:disabled {
+
+  opacity: .30;
+
+  cursor: default;
+
+  background: transparent;
+
+  color: #172126;
+
+  border-color: #172126;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.dynamic-gallery-message {
+
+  padding: 25px 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .dynamic-gallery {
+
+    gap: 48px;
+
+  }
+
+
+  .dynamic-gallery-track {
+
+    gap: 14px;
+
+  }
+
+
+  .dynamic-exam-card {
+
+    flex: 0 0 calc(100vw - 105px);
+
+    width: calc(100vw - 105px);
+
+    min-width: calc(100vw - 105px);
+
+    border-radius: 24px;
+
+  }
+
+
+  .dynamic-exam-info {
+
+    padding: 16px;
+
+  }
+
+
+  .dynamic-exam-title {
+
+    font-size: 15px;
+
+  }
+
+
+  .dynamic-exam-description {
+
+    font-size: 12px;
+
+  }
+
+
+  .dynamic-gallery-controls {
+
+    margin-top: 22px;
+
+    gap: 14px;
+
+  }
+
+
+  .dynamic-gallery-button {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex-basis: 52px;
+
+  }
+
+}
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .final-cta {
+      max-width: 800px;
+
+      margin: 0 auto;
+
+      text-align: center;
+
+      padding: 110px 24px;
+    }
+
+
+    .final-cta h2 {
+      font-size:
+        clamp(35px, 6vw, 58px);
+
+      line-height: 1;
+
+      letter-spacing: -2.5px;
+    }
+
+
+    .final-cta p {
+      color: var(--muted);
+
+      margin:
+        18px auto 30px;
+
+      font-size: 17px;
+    }
+
+
+    .primary-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      background: var(--green);
+
+      color: #071d14;
+
+      font-weight: 700;
+
+      padding:
+        15px 25px;
+
+      border-radius: 999px;
+
+      transition: 0.2s ease;
+    }
+
+
+    .primary-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      border-top:
+        1px solid var(--border);
+
+      padding:
+        35px 6%;
+    }
+
+
+    .footer-inner {
+      max-width: 1050px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    .footer-brand {
+      color: var(--text);
+
+      font-weight: 700;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================================================
+       FLOATING WHATSAPP BUTTON
+    ========================================================= */
+
+    .floating-whatsapp {
+      position: fixed;
+
+      right: 22px;
+
+      bottom: 22px;
+
+      z-index: 200;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      background: var(--green);
+
+      color: #071d14;
+
+      padding:
+        13px 18px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.16);
+
+      transition: 0.2s ease;
+    }
+
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-card {
+        height: 500px;
+
+        border-radius: 28px;
+      }
+
+
+      .hero-content {
+        padding: 50px 6%;
+      }
+
+
+      .hero-title {
+        font-size: 58px;
+      }
+
+
+      .input-list {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+
+      .output-tags {
+        grid-template-columns:
+          repeat(3, minmax(0, 1fr));
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .nav {
+        height: 68px;
+
+        padding:
+          0 20px;
+      }
+
+
+      .brand {
+        font-size: 20px;
+      }
+
+
+      .nav-button {
+        padding:
+          9px 14px;
+
+        font-size: 12px;
+      }
+
+
+      /* HERO */
+
+      .hero-wrapper {
+        padding:
+          28px 16px
+          45px;
+      }
+
+
+      .hero-card {
+        height: 500px;
+
+        width: 100%;
+
+        border-radius: 28px;
+      }
+
+
+      .hero-image {
+        object-position:
+          58% center;
+      }
+
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.18) 25%,
+            rgba(0, 0, 0, 0.55) 58%,
+            rgba(0, 0, 0, 0.78) 100%
+          );
+      }
+
+
+      .hero-content {
+        padding:
+          35px 28px 40px;
+
+        align-items:
+          flex-end;
+      }
+
+
+      .hero-content-inner {
+        max-width:
+          100%;
+      }
+
+
+      .hero-title {
+        font-size:
+          clamp(48px, 13vw, 67px);
+
+        line-height:
+          0.98;
+
+        letter-spacing:
+          -3px;
+
+        margin-bottom:
+          22px;
+      }
+
+
+      .hero-description {
+        font-size:
+          18px;
+
+        line-height:
+          1.48;
+
+        margin-bottom:
+          8px;
+      }
+
+
+      .hero-price {
+        margin-top:
+          8px;
+      }
+
+
+      .hero-old-price {
+        font-size:
+          19px;
+      }
+
+
+      .hero-new-price {
+        font-size:
+          31px;
+      }
+
+
+      .hero-coverage {
+        font-size:
+          15px;
+
+        line-height:
+          1.45;
+
+        margin-bottom:
+          24px;
+      }
+
+
+      .hero-button {
+        width:
+          100%;
+
+        min-height:
+          58px;
+
+        font-size:
+          16px;
+      }
+
+
+      /* =====================================================
+         OTHER SECTIONS
+      ===================================================== */
+
+      .section {
+        padding:
+          65px 20px;
+      }
+
+
+      /* =====================================================
+         PROCESS
+      ===================================================== */
+
+      .process {
+        padding: 0;
+      }
+
+
+      .process-title {
+        font-size:
+          26px;
+      }
+
+
+      .process-subtitle {
+        font-size:
+          15px;
+      }
+
+
+      .input-list {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap:
+          10px;
+
+        margin-top:
+          25px;
+      }
+
+
+      .input-pill {
+        min-height:
+          125px;
+
+        padding:
+          17px;
+
+        border-radius:
+          17px;
+      }
+
+
+      .input-icon {
+        width:
+          36px;
+
+        height:
+          36px;
+
+        top:
+          14px;
+
+        left:
+          14px;
+
+        border-radius:
+          10px;
+
+        font-size:
+          15px;
+      }
+
+
+      .input-name {
+        font-size:
+          14px;
+      }
+
+
+      .input-description {
+        font-size:
+          11.5px;
+
+        margin-top:
+          5px;
+      }
+
+
+      .arrow-divider {
+        height:
+          62px;
+
+        margin:
+          7px 0;
+      }
+
+
+      .arrow-circle {
+        width:
+          43px;
+
+        height:
+          43px;
+
+        font-size:
+          19px;
+      }
+
+
+      .output-box {
+        padding:
+          24px;
+
+        border-radius:
+          22px;
+      }
+
+
+      .output-title {
+        font-size:
+          24px;
+      }
+
+
+      .output-description {
+        font-size:
+          14px;
+      }
+
+
+      .output-tags {
+        grid-template-columns:
+          1fr;
+
+        gap:
+          8px;
+
+        margin-top:
+          20px;
+      }
+
+
+      .output-tag {
+        padding:
+          10px 12px;
+
+        font-size:
+          12px;
+      }
+
+
+      /* =====================================================
+         GALLERY
+      ===================================================== */
+
+      .gallery-category {
+        display:
+          block;
+      }
+
+
+      .category-name {
+        margin-bottom:
+          17px;
+      }
+
+
+      .gallery-items {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .exam-card {
+        border-radius:
+          18px;
+      }
+
+
+      /* FOOTER */
+
+      .footer-inner {
+        flex-direction:
+          column;
+
+        gap:
+          10px;
+      }
+
+
+      /* FLOATING BUTTON */
+
+      .floating-whatsapp {
+        right:
+          15px;
+
+        bottom:
+          15px;
+      }
+
+    }
+
+
+    /* =========================================================
+       SMALL PHONES
+    ========================================================= */
+
+    @media (max-width: 390px) {
+
+      .hero-card {
+        height:
+          500px;
+      }
+
+
+      .hero-content {
+        padding:
+          30px 23px 32px;
+      }
+
+
+      .hero-title {
+        font-size:
+          46px;
+      }
+
+
+      .hero-description {
+        font-size:
+          16px;
+      }
+
+
+      .hero-new-price {
+        font-size:
+          28px;
+      }
+
+
+      .input-list {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+
+      .input-pill {
+        min-height:
+          118px;
+
+        padding:
+          15px;
+      }
+
+
+      .input-description {
+        font-size:
+          10.5px;
+      }
+
+    }
+
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+   Runs once when a section first enters the viewport
+========================================================= */
+
+.scroll-reveal,
+.gallery-reveal,
+.cta-reveal {
+  opacity: 0;
+  transform: translateY(70px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: opacity, transform;
+}
+
+
+/* Activated by JavaScript */
+
+.scroll-reveal.is-visible,
+.gallery-reveal.is-visible,
+.cta-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Accessibility:
+   Users who prefer reduced motion
+   don't get the animation.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .scroll-reveal,
+  .gallery-reveal,
+  .cta-reveal {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+}
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================= -->
+
+  <nav class="nav">
+
+    <a href="#" class="brand">
+      dominioncity
+    </a>
+
+
+    <a
+      href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+      class="nav-button"
+      target="_blank"
+    >
+      Get your papers →
+    </a>
+
+  </nav>
+
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================= -->
+
+  <main>
+
+    <section class="hero-wrapper">
+
+      <div class="hero-card">
+
+
+        <img
+          src="images/hero-lady-phone.jpg"
+          alt="Woman smiling while using her phone"
+          class="hero-image"
+        />
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+          <div class="hero-content-inner">
+
+
+            <h1 class="hero-title">
+              Modern exam papers
+            </h1>
+
+
+            <p class="hero-description">
+              Get your modern exam papers fast and easily.
+            </p>
+
+
+            <div class="hero-price">
+
+              <span class="hero-old-price">
+                ₦18,000
+              </span>
+
+
+              <span class="hero-new-price">
+                ₦6,000
+              </span>
+
+            </div>
+
+
+            <p class="hero-coverage">
+              From pre-nursery to senior secondary school.
+            </p>
+
+
+            <a
+              href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+              class="hero-button"
+              target="_blank"
+            >
+
+              Get exam papers
+
+              <span class="hero-button-arrow">
+                ↗
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         INPUT → OUTPUT
+    ======================================================= -->
+
+    <section class="section scroll-reveal">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>
+        You send it.<br />
+        We make it beautiful.
+      </h2>
+
+      <p>
+        Don't worry about the format.
+        Send us your questions the way
+        you already have them.
+      </p>
+
+    </div>
+
+
+    <div class="process">
+
+      <div class="process-title">
+        Anything containing your questions.
+      </div>
+
+      <div class="process-subtitle">
+        We can work with it.
+      </div>
+
+
+      <!-- INPUT FILES -->
+
+      <div class="input-list">
+
+        <div class="input-pill">
+
+          <div class="input-icon">
+            ✎
+          </div>
+
+          <div class="input-name">
+            Handwritten pages
+          </div>
+
+          <div class="input-description">
+            Take a photo and send your questions.
+          </div>
+
+        </div>
+
+
+        <div class="input-pill">
+
+          <div class="input-icon">
+            T
+          </div>
+
+          <div class="input-name">
+            Text
+          </div>
+
+          <div class="input-description">
+            Paste or type your questions directly.
+          </div>
+
+        </div>
+
+
+        <div class="input-pill">
+
+          <div class="input-icon">
+            W
+          </div>
+
+          <div class="input-name">
+            WPS
+          </div>
+
+          <div class="input-description">
+            Send your existing WPS document.
+          </div>
+
+        </div>
+
+
+        <div class="input-pill">
+
+          <div class="input-icon">
+            D
+          </div>
+
+          <div class="input-name">
+            Word
+          </div>
+
+          <div class="input-description">
+            Send your existing Word document.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TRANSFORMATION -->
+
+      <div class="arrow-divider">
+
+        <div class="arrow-circle">
+          ↓
+        </div>
+
+      </div>
+
+
+      <!-- OUTPUT -->
+
+      <div class="output-box">
+
+        <div class="output-content">
+
+          <div class="output-label">
+            Your finished paper
+          </div>
+
+          <div class="output-title">
+            You get a modern exam paper.
+          </div>
+
+          <div class="output-description">
+            Professionally designed, beautifully
+            structured and ready for printing.
+          </div>
+
+
+          <div class="output-tags">
+
+            <div class="output-tag">
+
+              <div class="output-icon">
+                DOC
+              </div>
+
+              Word document
+
+            </div>
+
+
+            <div class="output-tag">
+
+              <div class="output-icon">
+                PDF
+              </div>
+
+              PDF document
+
+            </div>
+
+
+            <div class="output-tag">
+
+              <div class="output-icon">
+                ✓
+              </div>
+
+              Print-ready
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<section class="section gallery-section gallery-reveal">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <h2>
+        This is what<br />
+        your papers can look like.
+      </h2>
+
+      <p>
+        A few examples from the little ones
+        to the big ones.
+      </p>
+
+    </div>
+
+
+    <!-- Dynamic gallery is inserted here -->
+
+    <div id="examGallery"></div>
+
+  </div>
+
+</section>
+
+
+
+
+    <!-- =======================================================
+         FINAL CTA
+    ======================================================= -->
+
+    <section class="final-cta cta-reveal">
+
+  <h2>
+    Ready for your exam papers?
+  </h2>
+
+  <p>
+    Send your questions.
+    We'll handle the rest.
+  </p>
+
+  <a
+    href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+    class="primary-button"
+    target="_blank"
+  >
+
+    Get your papers now
+
+    <span>
+      ↗
+    </span>
+
+  </a>
+
+</section>
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+
+      <div>
+
+        <div class="footer-brand">
+          dominioncity
+        </div>
+
+
+        <div>
+          Modern exam papers, made simple.
+        </div>
+
+      </div>
+
+
+
+      <div>
+
+        <strong>
+          Your place name
+        </strong>
+
+        <br />
+
+        Your address goes here
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       FLOATING WHATSAPP
+  ======================================================= -->
+
+  <a
+    href="https://wa.me/09034302771"
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp"
+  >
+
+    💬 Get your papers
+
+  </a>
+
+<script>
+
+  /* =========================================================
+     ONE-TIME SCROLL REVEAL
+     
+     Each section animates the first time it enters
+     the viewport.
+
+     Once it becomes visible, we stop observing it.
+     Therefore, the animation NEVER repeats during
+     the current page session.
+  ========================================================= */
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const revealElements =
+      document.querySelectorAll(
+        ".scroll-reveal, .gallery-reveal, .cta-reveal"
+      );
+
+
+    // Immediately make elements visible if they're already in viewport
+    revealElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        element.classList.add("is-visible");
+      }
+    });
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        (entries, observer) => {
+
+          entries.forEach((entry) => {
+
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+
+            /* Start animation */
+
+            entry.target.classList.add("is-visible");
+
+
+            /*
+              IMPORTANT:
+
+              Stop watching this element.
+
+              This is what makes the animation happen
+              only once after the page loads.
+            */
+
+            observer.unobserve(entry.target);
+
+          });
+
+        },
+
+        {
+          /*
+            Start slightly before the element reaches
+            the center of the screen.
+          */
+
+          threshold: 0.1,
+
+          rootMargin:
+            "0px 0px -40px 0px"
+        }
+
+      );
+
+
+    /* Begin observing each section */
+
+    revealElements.forEach((element) => {
+
+      revealObserver.observe(element);
+
+    });
+
+  });
+
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container =
+    document.getElementById("examGallery");
+
+
+  if (!container) {
+    return;
+  }
+
+
+  /* =====================================================
+     LOAD JSON
+  ===================================================== */
+
+  fetch("./gallery.json")
+
+    .then(function (response) {
+
+      if (!response.ok) {
+        throw new Error(
+          "gallery.json could not be loaded."
+        );
+      }
+
+      return response.json();
+
+    })
+
+    .then(function (data) {
+
+      if (
+        !data ||
+        !Array.isArray(data.categories)
+      ) {
+
+        throw new Error(
+          "gallery.json has an invalid structure."
+        );
+
+      }
+
+
+      renderGallery(
+        data.categories
+      );
+
+    })
+
+    .catch(function (error) {
+
+      console.error(
+        "Exam gallery error:",
+        error
+      );
+
+
+      container.innerHTML = `
+        <div class="dynamic-gallery-message">
+          Unable to load the exam papers.
+        </div>
+      `;
+
+    });
+
+
+  /* =====================================================
+     RENDER
+  ===================================================== */
+
+  function renderGallery(categories) {
+
+    const gallery =
+      document.createElement("div");
+
+
+    gallery.className =
+      "dynamic-gallery";
+
+
+    categories.forEach(function (category) {
+
+      if (
+        !category ||
+        !Array.isArray(category.cards)
+      ) {
+        return;
+      }
+
+
+      const categoryElement =
+        document.createElement("div");
+
+
+      categoryElement.className =
+        "dynamic-gallery-category";
+
+
+      /* CATEGORY NAME */
+
+      const categoryName =
+        document.createElement("div");
+
+
+      categoryName.className =
+        "dynamic-gallery-category-name";
+
+
+      categoryName.textContent =
+        category.name || "";
+
+
+      /* SLIDER */
+
+      const slider =
+        document.createElement("div");
+
+
+      slider.className =
+        "dynamic-gallery-slider";
+
+
+      /* VIEWPORT */
+
+      const viewport =
+        document.createElement("div");
+
+
+      viewport.className =
+        "dynamic-gallery-viewport";
+
+
+      /* TRACK */
+
+      const track =
+        document.createElement("div");
+
+
+      track.className =
+        "dynamic-gallery-track";
+
+
+      /* CARDS */
+
+      category.cards.forEach(function (card) {
+
+        const examCard =
+          document.createElement("article");
+
+
+        examCard.className =
+          "dynamic-exam-card";
+
+
+        const image =
+          document.createElement("img");
+
+
+        image.src =
+          card.image || "";
+
+
+        image.alt =
+          (card.subject || "Exam") +
+          " exam paper";
+
+
+        image.loading =
+          "lazy";
+
+
+        const info =
+          document.createElement("div");
+
+
+        info.className =
+          "dynamic-exam-info";
+
+
+        const title =
+          document.createElement("div");
+
+
+        title.className =
+          "dynamic-exam-title";
+
+
+        title.textContent =
+          card.subject || "";
+
+
+        const description =
+          document.createElement("p");
+
+
+        description.className =
+          "dynamic-exam-description";
+
+
+        description.textContent =
+          card.description || "";
+
+
+        info.appendChild(title);
+
+        info.appendChild(description);
+
+        examCard.appendChild(image);
+
+        examCard.appendChild(info);
+
+        track.appendChild(examCard);
+
+      });
+
+
+      /* =================================================
+         CONTROLS
+      ================================================= */
+
+      const controls =
+        document.createElement("div");
+
+
+      controls.className =
+        "dynamic-gallery-controls";
+
+
+      const previous =
+        document.createElement("button");
+
+
+      previous.type =
+        "button";
+
+
+      previous.className =
+        "dynamic-gallery-button prev";
+
+
+      previous.setAttribute(
+        "aria-label",
+        "Previous " +
+        category.name +
+        " papers"
+      );
+
+
+      const next =
+        document.createElement("button");
+
+
+      next.type =
+        "button";
+
+
+      next.className =
+        "dynamic-gallery-button next";
+
+
+      next.setAttribute(
+        "aria-label",
+        "Next " +
+        category.name +
+        " papers"
+      );
+
+
+      controls.appendChild(previous);
+
+      controls.appendChild(next);
+
+
+      /* BUILD */
+
+      viewport.appendChild(track);
+
+      slider.appendChild(viewport);
+
+      slider.appendChild(controls);
+
+      categoryElement.appendChild(categoryName);
+
+      categoryElement.appendChild(slider);
+
+      gallery.appendChild(categoryElement);
+
+
+      /* ACTIVATE SLIDER */
+
+      activateSlider(
+        track,
+        previous,
+        next
+      );
+
+    });
+
+
+    container.appendChild(gallery);
+
+  }
+
+
+  /* =====================================================
+     SLIDER FUNCTIONALITY
+  ===================================================== */
+
+  function activateSlider(
+    track,
+    previous,
+    next
+  ) {
+
+
+    function getDistance() {
+
+      const card =
+        track.querySelector(
+          ".dynamic-exam-card"
+        );
+
+
+      if (!card) {
+        return track.clientWidth;
+      }
+
+
+      const cardWidth =
+        card.getBoundingClientRect().width;
+
+
+      const styles =
+        window.getComputedStyle(track);
+
+
+      const gap =
+        parseFloat(styles.gap) || 0;
+
+
+      return cardWidth + gap;
+
+    }
+
+
+    function updateButtons() {
+
+      const maxScroll =
+        track.scrollWidth -
+        track.clientWidth;
+
+
+      const current =
+        track.scrollLeft;
+
+
+      previous.disabled =
+        current <= 2;
+
+
+      next.disabled =
+        current >= maxScroll - 2;
+
+
+      /*
+       * If everything fits without scrolling,
+       * disable both buttons.
+       */
+
+      if (maxScroll <= 2) {
+
+        previous.disabled = true;
+
+        next.disabled = true;
+
+      }
+
+    }
+
+
+    /* LEFT */
+
+    previous.addEventListener(
+      "click",
+      function () {
+
+        track.scrollBy({
+
+          left:
+            -getDistance(),
+
+          behavior:
+            "smooth"
+
+        });
+
+      }
+    );
+
+
+    /* RIGHT */
+
+    next.addEventListener(
+      "click",
+      function () {
+
+        track.scrollBy({
+
+          left:
+            getDistance(),
+
+          behavior:
+            "smooth"
+
+        });
+
+      }
+    );
+
+
+    /* MANUAL SWIPE */
+
+    track.addEventListener(
+      "scroll",
+      updateButtons,
+      {
+        passive: true
+      }
+    );
+
+
+    /* RESIZE */
+
+    window.addEventListener(
+      "resize",
+      updateButtons
+    );
+
+
+    /*
+     * Wait for layout/images.
+     */
+
+    requestAnimationFrame(
+      updateButtons
+    );
+
+    setTimeout(
+      updateButtons,
+      300
+    );
+
+  }
+
+});
+</script>
+
+</body>
+</html>

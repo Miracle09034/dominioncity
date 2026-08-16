@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "name": "Pre-Nursery",
+      "cards": [
+        {
+          "image": "images/pre-nursery-1.png",
+          "subject": "Recognition",
+          "description": "Tiny learners. Big little achievements."
+        },
+        {
+          "image": "images/pre-nursery-2.png",
+          "subject": "Numbers",
+          "description": "Tiny hands. Big counting."
+        },
+        {
+          "image": "images/pre-nursery-3.png",
+          "subject": "Alphabet",
+          "description": "Small letters. Big beginnings."
+        }
+      ]
+    },
+
+    {
+      "name": "Nursery",
+      "cards": [
+        {
+          "image": "images/nursery-1.png",
+          "subject": "Handwriting",
+          "description": "One line at a time."
+        },
+        {
+          "image": "images/nursery-2.png",
+          "subject": "Recognition",
+          "description": "Learning should look this friendly."
+        },
+        {
+          "image": "images/nursery-3.png",
+          "subject": "Numbers",
+          "description": "Making every little number count."
+        }
+      ]
+    },
+
+    {
+      "name": "Primary",
+      "cards": [
+        {
+          "image": "images/primary-1.png",
+          "subject": "English Language",
+          "description": "Big questions deserve a paper that looks the part."
+        },
+        {
+          "image": "images/primary-2.png",
+          "subject": "Mathematics",
+          "description": "Counting is easier when the page isn't fighting back."
+        },
+        {
+          "image": "images/primary-3.png",
+          "subject": "Basic Science",
+          "description": "Curious minds deserve beautiful pages."
+        }
+      ]
+    },
+
+    {
+      "name": "Secondary",
+      "cards": [
+        {
+          "image": "images/secondary-1.png",
+          "subject": "Mathematics",
+          "description": "Fractions are hard enough without an ugly exam paper."
+        },
+        {
+          "image": "images/secondary-2.png",
+          "subject": "Basic Science",
+          "description": "Serious questions. Less serious-looking paper."
+        },
+        {
+          "image": "images/secondary-3.png",
+          "subject": "English Language",
+          "description": "Serious work deserves a clean presentation."
+        }
+      ]
+    }
+  ]
+}
