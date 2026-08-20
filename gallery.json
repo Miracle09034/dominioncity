@@ -5,81 +5,98 @@
       "cards": [
         {
           "image": "images/pre-nursery-1.png",
-          "subject": "Recognition",
-          "description": "Tiny learners. Big little achievements."
+          "subject": "Alphabet Reading",
+          "description": "ABCs so fun, they'll beg for storytime."
         },
         {
           "image": "images/pre-nursery-2.png",
           "subject": "Numbers",
-          "description": "Tiny hands. Big counting."
+          "description": "Counting cuteness, one number at a time."
         },
         {
           "image": "images/pre-nursery-3.png",
           "subject": "Alphabet",
-          "description": "Small letters. Big beginnings."
+          "description": "From A to Z, we make tiny letters mighty."
+        },
+        {
+          "image": "images/pre-nursery-4.png",
+          "subject": "Handwriting",
+          "description": "Scribbles that slowly turn into stories."
+        },
+        {
+          "image": "images/pre-nursery-5.png",
+          "subject": "C.R.S",
+          "description": "Little hearts learning big lessons."
         }
       ]
     },
-
     {
       "name": "Nursery",
       "cards": [
         {
           "image": "images/nursery-1.png",
-          "subject": "Handwriting",
-          "description": "One line at a time."
+          "subject": "Recognition",
+          "description": "Spot it, say it, own it."
         },
         {
           "image": "images/nursery-2.png",
-          "subject": "Recognition",
-          "description": "Learning should look this friendly."
+          "subject": "Number Counting",
+          "description": "Making every little number count."
         },
         {
           "image": "images/nursery-3.png",
-          "subject": "Numbers",
-          "description": "Making every little number count."
+          "subject": "Oral Drill",
+          "description": "Loud and proud practice makes perfect."
         }
       ]
     },
-
     {
       "name": "Primary",
       "cards": [
         {
           "image": "images/primary-1.png",
           "subject": "English Language",
-          "description": "Big questions deserve a paper that looks the part."
+          "description": "Punctuation, pronunciation, and plenty of polish."
         },
         {
           "image": "images/primary-2.png",
           "subject": "Mathematics",
-          "description": "Counting is easier when the page isn't fighting back."
+          "description": "Adding smiles, subtracting stress."
         },
         {
           "image": "images/primary-3.png",
           "subject": "Basic Science",
-          "description": "Curious minds deserve beautiful pages."
+          "description": "Curious minds, colorful experiments."
+        },
+        {
+          "image": "images/primary-4.png",
+          "subject": "Quantitative Reasoning",
+          "description": "Brain workouts that feel like playtime."
+        },
+        {
+          "image": "images/primary-5.png",
+          "subject": "Verbal Reasoning",
+          "description": "Word puzzles that make you go 'aha!'"
         }
       ]
     },
-
     {
       "name": "Secondary",
       "cards": [
         {
           "image": "images/secondary-1.png",
           "subject": "Mathematics",
-          "description": "Fractions are hard enough without an ugly exam paper."
+          "description": "Solving for X without the drama."
         },
         {
           "image": "images/secondary-2.png",
           "subject": "Basic Science",
-          "description": "Serious questions. Less serious-looking paper."
+          "description": "Lab coats, cool experiments, zero explosions (mostly)."
         },
         {
           "image": "images/secondary-3.png",
-          "subject": "English Language",
-          "description": "Serious work deserves a clean presentation."
+          "subject": "Literature in English",
+          "description": "Where every page turns into an adventure."
         }
       ]
     }
